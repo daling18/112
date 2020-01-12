@@ -1,0 +1,127 @@
+
+.imitate-table-outside{
+  border: 1px solid #ccc;
+  overflow-x: scroll;
+}
+.imitate-table{
+  min-width: 1100px;
+  overflow: hidden;
+  list-style: none;
+  line-height: 36px;
+}
+.imitate-table li{
+  overflow: hidden;
+  padding-left: 980px;
+  transition: .25s ease;
+}
+.imitate-table li:hover{
+  background: #eef1f6;
+}
+.imitate-table .hd{
+  color: #999;
+  background: #f4f4f4!important;
+  font-weight: 400;
+  text-align: center;
+  line-height: 45px;
+}
+.imitate-table b, .imitate-table i{
+  float: left;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0 5px;
+}
+.imitate-table li .num:first-child{
+  border-left: none;
+}
+.imitate-table .no{
+  width: 39px;
+  text-align: center;
+  margin-left: -980px;
+}
+.imitate-table .comp{
+  width: 279px;
+  margin-left: -930px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.imitate-table .hd .c1,
+.imitate-table .hd .c2{
+  color: #999;
+  text-align: center;
+}
+.imitate-table .c1{
+  width: 149px;
+  margin-left: -640px;
+  color: #f60;
+  text-align:right;
+}
+.imitate-table .c2{
+  width: 149px;
+  margin-left: -480px;
+  text-align:right;
+}
+.imitate-table .qr{
+  width: 99px;
+  margin-left: -320px;
+  text-align: center;
+}
+.imitate-table .qr em{
+  font-style: normal;
+}
+.imitate-table .qr a{
+  color: #b10c79;
+}
+.imitate-table .id{
+  width: 199px;
+  margin-left: -210px;
+  text-align: center;
+}
+.imitate-table .info{
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+.imitate-table .info-inside{
+  font-style: normal;
+  color: #b10c79;
+  cursor: pointer;
+}
+.imitate-table .group,
+.imitate-table .g-li{
+  overflow: hidden;
+  margin-left: -720px;
+  padding-left: 720px;
+}
+.imitate-table .more {
+  height: 36px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #b10c79;
+  cursor: pointer;
+  transition: .2s;
+  position: relative;
+  padding-left: 0;
+  i {
+    font-size: 12px;
+    line-height: 36px;
+    transition: .3s;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 36px;
+    transition: .3s;
+    margin-left: 5px;
+  }
+
+  &:hover {
+    color: #b10c79;
+  }
+}
+.imitate-table .ellipsis{
+  height: auto;
+  line-height: 36px;
+}

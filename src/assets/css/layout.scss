@@ -1,0 +1,297 @@
+@import './variables.scss';
+@import './element-rewrite.scss';
+
+
+@font-face {
+  font-family: "side-icon";
+  src: url('../fonts/iconfont.eot?t=1540183423845');
+  /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1540183423845#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/iconfont.ttf?t=1540183423845') format('truetype'),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg?t=1540183423845#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+
+
+.app-wraper {
+  width: 100%;
+  height: 100%;
+  background: $bodyBg;
+  color: $textColor;
+
+  .main-container {
+    // height: 100%;
+    transition: margin-left .3s;
+    margin-left: $sideBarWidth !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .app-main {
+      flex-grow: 1;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+  }
+
+  .sidebar-container {
+    width: $sideBarWidth !important;
+    background-color: $menuBg;
+    height: 100%;
+    transition: width .3s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    .logo {
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      background-color: $sideBarLogoBg;
+      text-align: center;
+
+      img {
+        margin-top: 10px;
+        width: auto;
+        height: 30px;
+      }
+    }
+
+    .el-menu {
+      border: none;
+    }
+
+    &.el-submenu>.el-submenu__title,
+    & .el-submenu .el-menu-item {
+      min-width: $sideBarWidth !important;
+      background-color: $subMenuBg !important;
+      color: $menuText!important;
+      &:hover, &.is-active{
+        color: $menuActiveText!important;
+      }
+    }
+
+    .el-submenu__title {
+      i {
+        color: $menuText;
+      }
+    }
+
+    .el-submenu .el-menu-item {
+      height: 35px;
+      line-height: 35px;
+      // text-align: center;
+      font-size: 12px;
+    }
+
+    // 选中样式
+    .is-active>.el-submenu__title {
+      color: $subMenuActiveText !important;
+    }
+  }
+
+  &.hideSidebar {
+    .main-container {
+      margin-left: $hideSidebarWidth !important;
+    }
+
+    .sidebar-container {
+      width: $hideSidebarWidth !important;
+
+      &.el-submenu>.el-submenu__title,
+      & .el-submenu .el-menu-item {
+        min-width: $hideSidebarWidth !important;
+      }
+    }
+
+  }
+
+  .scrollbar-wrapper {
+    overflow-x: hidden !important;
+  }
+
+  .el-scrollbar {
+    height: 100%;
+  }
+
+  // .logo {
+  //   display: block;
+  //   height: 30px;
+  //   width: auto;
+  // }
+}
+
+
+.section {
+  background: #fff;
+  border: 1px solid $borderColor;
+  margin-bottom: 5px;
+}
+
+.side-icon {
+  // display: inline-block;
+  // width: 18px;
+  // height: 18px;
+  // margin-right: 5px;
+  // background-size: 18px 18px;
+  // vertical-align: middle;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // margin-top: -2px;
+  margin-right: 10px;
+
+  &::before {
+    font-family: "side-icon" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 旧菜单图标开始 -- 20190123*/
+  &.finance-icon::before {
+
+    // background-image: url(../icons/finace-icon.png);
+  }
+
+  &.plan-icon {
+    // background-image: url(../icons/plan-icon.png);
+  }
+
+  &.sys-icon {
+    // background-image: url(../icons/sys-icon.png);
+  }
+
+  &.contract-icon {
+    // background-image: url(../icons/contract-icon.png);
+  }
+
+  &.setting-icon {
+    // background-image: url(../icons/setting-icon.png);
+  }
+
+  &.distribution-icon {
+    // background-image: url(../icons/distribution-icon.png);
+  }
+
+  &.supplier-icon {
+    // background-image: url(../icons/supplier-icon.png);
+  }
+
+  &.self-icon {
+    background-size: 16px;
+    // background-image: url(../icons/self-icon.png);
+  }
+
+  /* 旧菜单图标结束 */
+
+  // 旅游线路
+  &.tourist-icon::before {
+    // background-size: 18px 12px;
+    content: '\e603';
+    // background-image: url(../icons/tourist-icon.png);
+  }
+
+  // 单项产品
+  &.single-icon::before {
+    content: "\e7ab";
+    // background-image: url(../icons/single-icon.png);
+  }
+
+  // 酒店
+  &.hotel-icon::before {
+    content: "\e89b";
+    // background-image: url(../icons/hotel-icon.png);
+  }
+
+  // 政策
+  &.policy-icon::before {
+    content: '\e60c';
+    // background-image: url(../icons/policy-icon.png);
+  }
+
+  // 团控中心
+  &.tuan-icon::before {
+    content: "\e68d";
+    // background-image: url(../icons/tuan-icon.png);
+  }
+
+  //销售中心
+  &.sale-icon::before {
+    content: "\e61c";
+    // background-image: url(../icons/sale-icon.png);
+  }
+
+  //采购订单
+  &.purchaseorder-icon::before {
+    content: "\e682";
+    // background-image: url(../icons/purchaseorder-icon.png);
+  }
+
+  // 销售订单
+  &.saleorder-icon::before {
+    content: "\e61c";
+    // background-image: url(../icons/saleorder-icon.png);
+  }
+
+  //结算中心
+  &.settlement-icon::before {
+    content: "\e602";
+    // background-image: url(../icons/settlement-icon.png);
+  }
+
+  // 统计报表
+  &.statrepo-icon::before {
+    content: "\e60a";
+    // background-image: url(../icons/statrepo-icon.png);
+  }
+
+  // TODO 系统管理
+  &.sysmana-icon::before {
+    content: "\e64c";
+    // background-image: url(../icons/sysmana-icon.png);
+  }
+
+  // 基础数据
+  &.basedata-icon::before {
+    content: "\e677";
+    // background-image: url(../icons/basedata-icon.png);
+  }
+
+  // TODO  旅游资源
+  &.traveldata-icon::before {
+    // background-image: url(../icons/traveldata-icon.png);
+    content: "\e887";
+  }
+
+  // 微信小程序
+  &.wechat-icon::before {
+    // background-image: url(../icons/wechat-icon.png);
+    content: "\e63c";
+  }
+  // 店铺
+  &.shop-icon::before {
+    // background-image: url(../icons/shop-icon.png);
+    content: "\e695";
+  }
+  // 用户  
+  &.client-icon::before {
+    content: "\e604";
+  }
+
+  // 客服专用
+  &.kfservice-icon::before {
+    // background-image: url(../icons/kfservice-icon.png);
+    content: "\e698";
+  }
+
+  // 会员
+  &.member-icon::before {
+    content: "\e641";
+  }
+
+}

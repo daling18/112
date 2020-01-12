@@ -1,0 +1,75 @@
+{
+  "name": "bom",
+  "version": "0.1.0",
+  "description": "bom",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "vue-cli-service build",
+    "deploy:test": "vue-cli-service build --mode test",
+    "deploy:staging": "vue-cli-service build --mode staging"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "clipboard": "^2.0.1",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.4.5",
+    "font-awesome": "^4.7.0",
+    "image-compressor.js": "^1.1.4",
+    "moment": "^2.24.0",
+    "qs": "^6.8.0",
+    "vue": "^2.6.10",
+    "vue-affix": "^0.5.2",
+    "vue-core-image-upload": "^2.4.11",
+    "vue-cropper": "^0.4.9",
+    "vue-html5-editor": "^1.1.1",
+    "vue-router": "^3.0.7",
+    "vuejs-logger": "^1.5.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.9.2",
+    "postcss": "5.0.14",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.0.3",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-axios": "^0.0.4",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

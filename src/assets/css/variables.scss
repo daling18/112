@@ -1,0 +1,39 @@
+$themeColor:#B10C79;
+$bodyBg:#F5F5F5;
+
+// sidebar
+$menuText:rgba(255, 255, 255, 0.8);
+$menuActiveText:#fff;
+$subMenuActiveText:#fff; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:#42465B;
+$menuHover:#42465B;
+
+$subMenuBg:#333745;
+$subMenuHover:#333745;
+
+$sideBarWidth: 180px;
+$hideSidebarWidth: 60px;
+
+$sideBarLogoBg: #31363A;
+
+// border
+$borderColor: #E6E6E6;
+$gray:#F6F6F6;
+
+
+$textColor: #333333;
+$labelColor: #666666;
+
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  textColor: $textColor;
+  themeColor: $themeColor;
+}

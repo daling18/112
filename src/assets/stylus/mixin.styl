@@ -1,0 +1,19 @@
+$color-theme = #b10c79
+
+text-des-style($fontSize, $color, $lineHeight)
+  if ($fontSize)
+    font-size $fontSize
+  if ($color)
+    color $color
+  if ($lineHeight)
+    line-height $lineHeight
+
+// 清除浮动
+clearfix()
+  &::after
+    clear both
+    content ''
+    display block
+    height 0
+    line-height 0
+    overflow hidden

@@ -1,0 +1,163 @@
+.system-search {
+    padding-top: 25px;
+    padding-bottom:15px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .hd {
+        padding: 10px 20px;
+    }
+    .bd {
+        padding: 10px 0 10px 0;
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+    .search-panel {
+        float: left;
+        margin-right: 20px;
+    }
+    .search-line-item {
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .search-item {
+            float: left;
+        }
+    }
+    .search-item {
+      float: left;
+        height: 35px;
+        padding-left: 70px;
+        padding-right: 20px;
+        margin-bottom: 10px;
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        // calendar可能被废弃
+        &.calendar,
+        &.mix{
+          width: 390px;
+        }
+        &.mix{
+            .el-select{
+                float: left;
+            }
+        }
+        .color-orange{
+          line-height: 30px;
+        }
+        .label {
+            float: left;
+            color: #999999;
+            //width: 65px;
+            margin-left: -70px;
+            line-height: 35px;
+            text-align: right;
+            &.zhi{
+              width: 20px;
+              text-align: center;
+              margin-left: 0;
+            }
+        }
+        .el-select{
+          width: 150px;
+        }
+        >.el-input {
+            float: left;
+            width: 150px;
+        }
+
+        &.search-button{
+            padding-left:0px;
+            
+            .el-button{
+                width: 125px;
+                height: 35px;
+            }
+        }
+    }
+    .info-item{
+        display: block;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        padding-left: 110px;
+        line-height: 30px;
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .label {
+            float: left;
+            color: #999999;
+            width: 100px;
+            margin-left: -110px;
+            text-align: right;
+        }
+        .con{
+            float:left;
+            width: 100%;
+        }
+    }
+    .el-button {
+        float: left;
+        border-radius: 4px;
+    }
+    .el-checkbox {
+        line-height: 30px;
+    }
+    .el-checkbox {
+        .el-checkbox__label {
+            color: #999999;
+        }
+    }
+    .search-citycode {
+        position: relative;
+        padding-right: 30px;
+        .exchange {
+            position: absolute;
+            top: 25px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            &::after {
+                content: '换';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                color: #fff;
+                background-color: #cccccc;
+                text-align: center;
+                line-height: 20px;
+                cursor: pointer;
+                z-index: 2;
+            }
+            &::before {
+                content: '';
+                box-sizing: border-box;
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                width: 20px;
+                height: 40px;
+                border: 1px solid #ccc;
+                border-left: none;
+                z-index: 1;
+            }
+        }
+    }
+}

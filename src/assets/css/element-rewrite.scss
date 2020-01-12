@@ -1,0 +1,36 @@
+@import './variables.scss';
+.el{
+    /* 复写el-radio-button, el-checkbox-button样式 */
+    &-radio, &-checkbox{
+      &-button{
+        margin-right: 5px;
+        &__inner{
+            min-width: 70px;
+            border-radius: 0 !important;
+            border: none !important;
+            background: #F2F2F2;
+            line-height: 1.4;
+          }
+      }
+    }
+
+    &-tag{
+        & + &{
+            margin-left: 5px;
+        }
+        &__close{
+            color:$themeColor!important;
+            &:hover{
+                background-color: initial!important;
+            }
+        }
+    }
+    &-button{
+        &--primary{
+            &.is-plain{
+                background-color: #fff;
+            }
+        }
+    }
+  }
+  

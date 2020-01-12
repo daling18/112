@@ -1,0 +1,212 @@
+// ===========================线下业务汇总表首页样式===========================
+.report-hd{
+	background: #fafafa;
+	border-bottom: 1px solid #dddddd;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 10px 0 20px;
+	.btn{
+		margin-left: 15px;
+	}
+	.tab{
+		float: left;
+		color: #999999;
+		text-align: center;
+		.li{
+			float: left;
+			width: 140px;
+			height: 42px;
+			overflow: hidden;
+			border-bottom: 2px solid #fafafa;
+			cursor: pointer;
+			color: #333;
+		}
+		.on{
+			color: #ae1f77;
+			border-color: #ae1f77;
+		}
+	}
+}
+.report-bd{
+	padding: 15px;
+	background: #fff;
+}
+
+// 财务报表首页、周数据的自定义table
+.report-table{
+  th, td{
+    height: 34px;
+  }
+  .cell{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .el-table__row:first-child{
+    font-weight: 700;
+    .el-table__expand-column .cell{
+      display: none;
+    }
+  } 
+  .el-table__expand-column{
+    width: 20px;
+    border-right: none;
+    .cell{
+      padding: 0;
+    }
+  }
+  .el-table__expand-icon{
+    height: 34px;
+  }
+  .child-table{
+    th, td{
+      height: 29px;
+      div{
+        font-size: 13px;
+      }
+    }
+    .el-table__row:first-child{
+      font-weight: 400;
+    }
+  }
+  .el-table__expanded-cell{
+    background: #fff;
+    padding: 10px;
+  }
+  .ep-out{
+    border: 1px solid #ccc;
+    border-bottom: none;
+  }
+  .ep-box{
+    &:nth-child(n+1)::after{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: #ccc;
+    }
+    position: relative;
+    background: #f4f4f4;
+    padding-left: 48px;
+    overflow: hidden;
+    .title{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 48px;
+      margin-top: -10px;
+      text-align: center;
+    }
+    .el-table{
+      margin-top: -1px;
+    }
+    th .cell{
+      color: #333333;
+    }
+  }
+  .r-account{
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+// ===========================非线下业务汇总表页面外其他的页面相同模块合集===========================
+.report-sub{
+	margin-top: 10px;
+	padding: 15px;
+  background: #fff;
+}
+.report-sub-hd{
+  margin-bottom: 15px;
+  .comp{
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+.export-box{
+  background: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  .comp{
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+// ===========================首页和非首页一致的css===========================
+.report-box,
+.report-sub{
+  .el-table td .cell{
+    max-height: none;
+  }
+  .is{
+    cursor: pointer;
+    &:hover{
+      color: #b10c79;
+    }
+  }
+  .is1 .so{
+    background-position: 0 -12px;
+  }
+  .is2 .so{
+    background-position: 0 -24px;
+  }
+  .so{
+    display: inline-block;
+    width: 12px; 
+    height: 12px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAABICAYAAADs+TUPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiN2MzYzJhNi03MGMxLTFmNDQtOThjMy03NjUwZTkyNWM5NTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUU1RDUzOTM0Qzg2MTFFODk2ODVBNkFENUZBODlGNjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUU1RDUzOTI0Qzg2MTFFODk2ODVBNkFENUZBODlGNjMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRGMDczMDc5NEM4NjExRTg5Njg1QTZBRDVGQTg5RjYzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRGMDczMDdBNEM4NjExRTg5Njg1QTZBRDVGQTg5RjYzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+sIYLYwAAAqNJREFUeNrsmE1oE0EUx2e/0ny1hMTQ9FJqbUGxLWijeCwGwYuKTU8iqAfBg0jRg6g3D0rBD+zVi4J4qFj8uAhFrTcxURQrimgtRaS1TYhNs2myScb/wFrWkBqw+4TiLvxgdh/My7x5b+afJ3HOGeWjWl+i0Wi1vQc8BdfA+SrbOXAS9INnVkMymVwey3V+QBcIgl01bLtN2x3QutIEsg1RCIN7wEvlQDxbwHUqB2LiEjgATlE4GLdMPFS9X3aFaBjcAAq4uWKarvI5BjTwncpBARykyiJGWQeOA3sdXAK3gJvkuDbLvQUY4AjFCg6BMjgMTlA4GAOnLeHqo9jky+C2WfZHqbJITPyKMk11sB/MUdbBNBgAafCohn3MtE38yYFELVvIK/m3QjveEa+2D7xu+jbSrgfFtbhTfIjP9NTVRfsyF2s7KMilagd9S7IhpTW9t44uipp75ugiRxc5uqheFulKkf4symh5+sOusdSwdnVRAnwBAZLj+qv7x9acUpQlLiX8ZVenwmV7V7BpsfmsxCQ26U114PUuRYiGNmebH4rBhH+mf0FdilFs8t62fHCqInH22ZvaaKsDb1ljQcPLWvOBbeGiT6dM0/nOXDjmKWsVyjp43p1tGXRXNB4yfC8AE/znuuh+4EzdftFo5O1yiJBlse5sZFCrKMOqpSivTI78fb8opeV+sV1oJtTLVXzeQRaivGLIH31zTzBcR7YH866cZ9qTSUAB4tIy7HWwQQ99kLnEpjzpNrw+sH0FTSX3467FyKgYv2uc3WP5j2drmsbb9dAnzjh775+9YLtsCRgeQS+X+BukbNp2B1m1IO7xBQzXr91miFgF+Vkk9oI8RL6yy+kXOf0ip1+02n6RUH4mL4Vmaqio44BZ+ae66KcAAwAtbuc9HSgRHgAAAABJRU5ErkJggg==) no-repeat;
+    background-size: 12px 36px;
+    vertical-align: -1px;
+    margin-left: 2px;
+  }
+  .wei{
+    margin-right: 4px;
+    &::after{
+      content: '未';
+      display: inline-block;
+      color: #ff0000;
+      background: #fff2f2;
+      font-size: 12px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 2px;
+    }
+  }
+  .link{
+    color: #b10c79;
+    cursor: pointer;
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+.report-box .btn,
+.report-sub-hd .btn,
+.export-box .btn{
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background: #b10c79;
+  border-radius: 4px;
+}
+.bz{
+  color: #999999;
+  margin-top: 10px;
+  .title{
+    font-weight: 700;
+  }
+  ul{
+    list-style: none;
+    margin: 5px 0 0 5px;
+    line-height: 20px;
+  }
+}
